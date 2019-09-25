@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="R2W.Login">
+    <ContentPage.Content>
+        <StackLayout x:Name="StackLayoutMap" Padding="60">
+            <Entry x:Name="Login_Email" Placeholder="Email"></Entry>
+            <Entry x:Name="Login_Password" IsPassword="True" Placeholder="Password"></Entry>
+            <Button x:Name="Login_Submit" Text="Log In"></Button>
+            <Button Text="Forgot Password"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
