@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Net;
+using Newtonsoft.Json.Linq;
 
 namespace R2W
 {
@@ -24,8 +25,9 @@ namespace R2W
             {
                 html = reader.ReadToEnd();
             }
+            JObject json = JObject.Parse(html);
 
-            return html;
+            return ((string)json["token"]);
         }
     }
 }

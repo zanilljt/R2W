@@ -26,7 +26,7 @@ namespace R2W
             String temp = HTMLRequest.GETRequest(email_entry.Text, password_entry.Text);
             Button whichButton = (Button)sender;
             if (whichButton == Login_Submit)
-                label.Text = temp;
+                label.Text = "Your token is: \n" + temp;
         }
     }
 }
