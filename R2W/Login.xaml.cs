@@ -13,7 +13,7 @@ namespace R2W
         {
             InitializeComponent();
             //Globals.API_ID.ToString();
-            label = new Label { Text = "asdfadfasd" };
+            label = new Label { Text = "No Token Yet" };
             //this.Content = label;
             StackLayoutMap.Children.Add(label);
             Login_Submit.Clicked += OnClicked;
@@ -21,9 +21,12 @@ namespace R2W
 
         private void OnClicked(object sender, EventArgs e)
         {
+            Entry email_entry = Login_Email;
+            Entry password_entry = Login_Password;
+            String temp = HTMLRequest.GETRequest(email_entry.Text, password_entry.Text);
             Button whichButton = (Button)sender;
             if (whichButton == Login_Submit)
-                label.Text = "Tried to login";
+                label.Text = temp;
         }
     }
 }
